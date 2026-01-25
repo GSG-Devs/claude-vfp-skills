@@ -1,0 +1,167 @@
+# CLAUDE.md - VFP Project Template
+
+> Copy this file to your VFP project root and customize for your project.
+
+## Project Overview
+
+| Aspect | Details |
+|--------|---------|
+| Language | Visual FoxPro 9.0 |
+| Database | SQL Server [VERSION] |
+| Architecture | SQL Pass-Through (SPT) with buffered cursors |
+
+```
+YourProject/
+├── Prgs/           # Source code (.prg)
+├── Forms/          # Forms (.scx or .sc2 for version control)
+├── Classes/        # Class libraries (.vcx or .vc2)
+├── Reports/        # Reports (.frx)
+├── Logs/           # Application logs
+└── docs/           # Documentation
+```
+
+---
+
+## Database Field Naming Conventions
+
+| Prefix | SQL Type | VFP Type | Rule |
+|--------|----------|----------|------|
+| `id*` | INT IDENTITY/INT | Integer | IDENTITY=PK, INT=FK |
+| `d*` | **DATE** | Date | Use `Date()` NOT `Datetime()`! |
+| `t*` | DATETIME | DateTime | Use `Datetime()` |
+| `n*` | NUMERIC | Numeric | Numbers |
+| `c*` | VARCHAR/CHAR | Character | Strings |
+| `l*` | BIT | Logical | Booleans |
+
+---
+
+## Variable Prefixes
+
+| Prefix | Scope |
+|--------|-------|
+| `gl_*` | Global (PUBLIC) |
+| `m.*` | Memory variables (SCATTER) |
+| `lc*`, `ln*`, `ld*`, `ll*` | Local (char, numeric, date, logical) |
+| `lo*` | Local Object |
+| `la*` | Local Array |
+
+---
+
+## Key Functions
+
+```foxpro
+*-- SQL Execution (customize for your project)
+sql_exec_safe("SELECT ...", "cursor")
+
+*-- Open table with buffering
+foloseste("tablename", "cursor")
+
+*-- Save buffered changes
+sql_tableupdate("cursor")
+
+*-- Close cursor (auto-saves)
+inchide("cursor")
+
+*-- Logging
+log_error("message")
+log_info("message")
+```
+
+---
+
+## Code Rules
+
+### Rule 1: Date() vs Datetime()
+```foxpro
+*-- d* fields (DATE) -> Date()
+m.dbirthdate = Date()
+
+*-- t* fields (DATETIME) -> Datetime()
+m.tcreated = Datetime()
+```
+
+### Rule 2: No ELSEIF in VFP
+```foxpro
+*-- WRONG
+IF x > 10
+    y = 1
+ELSEIF x > 5   && VFP has no ELSEIF!
+    y = 2
+ENDIF
+
+*-- CORRECT
+DO CASE
+CASE x > 10
+    y = 1
+CASE x > 5
+    y = 2
+ENDCASE
+```
+
+### Rule 3: SCATTER/REPLACE (Not GATHER!)
+```foxpro
+*-- Read with Scatter
+SCATTER MEMVAR
+
+*-- Write specific fields with REPLACE
+REPLACE cname WITH m.cname IN cursor
+sql_tableupdate("cursor")
+```
+
+### Rule 4: NULL Handling
+```foxpro
+*-- Always check type before comparing dates
+IF VARTYPE(ddeadline) = 'D' AND ddeadline < DATE()
+    *-- Overdue
+ENDIF
+```
+
+---
+
+## Project-Specific Rules
+
+> Add your project-specific rules here:
+
+1. [Your rule 1]
+2. [Your rule 2]
+3. [Your rule 3]
+
+---
+
+## Common Errors
+
+| Error | Solution |
+|-------|----------|
+| "Conversion failed date/time" | Use `Date()` for d* fields |
+| "Unrecognized command verb" | Replace ELSEIF with DO CASE |
+| Error 1492 "No key columns" | Check cursor KeyFieldList property |
+
+---
+
+## Workflows
+
+### Making Code Changes
+```
+1. Edit .prg/.sc2/.vc2 files
+2. [Your conversion tool if using text-based VCS]
+3. Test in VFP
+4. Commit to version control
+```
+
+---
+
+## Claude AI Limitations
+
+| CAN Do | CANNOT Do |
+|--------|-----------|
+| Edit code in procedures/methods | Add new objects to forms |
+| Modify object properties | Delete objects from forms |
+| Edit .prg files | Add new methods/events |
+
+---
+
+## Resources
+
+- [VFPX Community](https://vfpx.github.io/)
+- [Claude VFP Skills](https://github.com/GSG-Devs/claude-vfp-skills)
+- [Your project documentation]
