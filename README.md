@@ -229,7 +229,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Maintained by
 
-This project is developed and maintained by **[Geseidl IT Solutions](https://geseidl.ro/servicii-it)**, part of [Geseidl Consulting Group](https://geseidl.ro) — a family-run consulting firm based in Ploiești, Romania, with over 22 years of experience in accounting, audit, HR, IT services, and consulting.
+<a href="https://geseidl.ro/servicii-it"><img src="https://geseidl.ro/assets/icons/logo-green.png" alt="Geseidl Consulting Group" height="40"></a>
+
+This project is developed and maintained by **[Geseidl IT Solutions](https://geseidl.ro/servicii-it)**, part of [Geseidl Consulting Group](https://geseidl.ro) — a family-run consulting firm based in Ploiesti, Romania, with over 22 years of experience in accounting, audit, HR, IT services, and consulting.
 
 We use Visual FoxPro for our internal time tracking and management systems (Gestime ERP), and created these skills to improve our development workflow with Claude Code.
 
@@ -237,7 +239,7 @@ We use Visual FoxPro for our internal time tracking and management systems (Gest
 |---|---|
 | **Website** | [geseidl.ro](https://geseidl.ro) |
 | **IT Services** | [geseidl.ro/servicii-it](https://geseidl.ro/servicii-it) |
-| **Location** | Ploiești, Romania |
+| **Location** | Ploiesti, Romania |
 | **Contact** | office@geseidl.ro |
 
 ### Other Open-Source Projects
@@ -255,6 +257,12 @@ We use Visual FoxPro for our internal time tracking and management systems (Gest
 
 ---
 
-**Made with care for the VFP community by [Geseidl IT Solutions](https://geseidl.ro/servicii-it)**
-
-*If this project helps you, consider starring it and sharing with other VFP developers!*
+<p align="center">
+  <a href="https://make-it-count.ro">
+    <img src="https://geseidl.ro/assets/icons/makeitcount-amprenta-gold.png" alt="makeitcount" height="60">
+  </a>
+  <br>
+  <sub><em>We believe great tools should be shared. Every contribution counts.</em></sub>
+  <br>
+  <sub><a href="https://make-it-count.ro">make-it-count.ro</a></sub>
+</p>
