@@ -262,7 +262,7 @@ We use Visual FoxPro for our internal time tracking and management systems (Gest
     <img src="https://geseidl.ro/assets/icons/makeitcount-amprenta-gold.png" alt="makeitcount" height="60">
   </a>
   <br>
-  <sub><em>We believe great tools should be shared. Every contribution counts.</em></sub>
+  <sub><em>Building bridges between legacy and AI, one skill at a time. Make it count.</em></sub>
   <br>
   <sub><a href="https://make-it-count.ro">make-it-count.ro</a></sub>
 </p>
