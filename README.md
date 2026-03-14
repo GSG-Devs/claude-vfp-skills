@@ -227,18 +227,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## About the Maintainers
+## Maintained by
 
-This project is developed and maintained by **[Geseidl Consulting Group](https://geseidl.ro)** (GSG), a family-run accounting and consulting firm based in Ploiești, Romania, with over 20 years of experience.
+This project is developed and maintained by **[Geseidl IT Solutions](https://geseidl.ro/servicii-it)**, part of [Geseidl Consulting Group](https://geseidl.ro) — a family-run consulting firm based in Ploiești, Romania, with over 22 years of experience in accounting, audit, HR, IT services, and consulting.
 
-We use Visual FoxPro for our internal time tracking and management systems, and created these skills to improve our development workflow with Claude Code.
+We use Visual FoxPro for our internal time tracking and management systems (Gestime ERP), and created these skills to improve our development workflow with Claude Code.
 
 | | |
 |---|---|
 | **Website** | [geseidl.ro](https://geseidl.ro) |
-| **Services** | Audit, Tax Consulting, IT Services, Accounting |
+| **IT Services** | [geseidl.ro/servicii-it](https://geseidl.ro/servicii-it) |
 | **Location** | Ploiești, Romania |
 | **Contact** | office@geseidl.ro |
+
+### Other Open-Source Projects
+
+- **[mRemoteNG Community Edition](https://github.com/robertpopa22/mRemoteNG)** — .NET 10 modernization of mRemoteNG with AI orchestrator (702 issues resolved, 6,175 tests)
+- **[Mail-in-a-Box Geseidl Edition](https://github.com/robertpopa22/mailinabox)** — Production mail server fork with rspamd, NAT, external DNS
 
 ---
 
@@ -250,6 +255,6 @@ We use Visual FoxPro for our internal time tracking and management systems, and 
 
 ---
 
-**Made with care for the VFP community by [Geseidl Consulting Group](https://geseidl.ro)**
+**Made with care for the VFP community by [Geseidl IT Solutions](https://geseidl.ro/servicii-it)**
 
 *If this project helps you, consider starring it and sharing with other VFP developers!*
